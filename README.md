@@ -1,1 +1,2 @@
 # logintest
+# install webdriver first
