@@ -1,0 +1,17 @@
+*** Setting ***
+Library    Selenium2Library
+*** Variables ***
+${url}		http://demo.t3-framework.org/joomla30/index.php/en/joomla-pages/sample-page-2/login-page
+${browser}	chrome
+${username} 	demo
+${password}	password
+*** Test Cases ***
+LoginTest
+	Open Browser  	${url}  ${browser}
+	Maximize Browser Window
+	Set Selenium Speed	0.3
+	Input Text		id= username	${username} 
+	Input Password	id=password	${password}
+	Checkbox Should Be Selected	id=remember
+	Submit Form	type=submit
+	Log 		Test completed
