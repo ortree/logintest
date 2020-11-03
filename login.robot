@@ -10,9 +10,11 @@ ${password}		password
 *** Test Cases ***
 LoginTest
 	Open Browser  	${url}  ${browser}
-	Set Browser Implicit Wait  2
 	Input Text		id= username	${username} 
 	Input Password	id=password		${password}
 	Select Checkbox	id=remember
 	Click Element    xpath=//*[@class="login"]/form/fieldset/div[4]/div/button
+	
+	Title Should Be	Welcome Page
 	Log 		Test completed
+	Close Browser
